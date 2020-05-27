@@ -1,6 +1,10 @@
 package aufgaben;
 
 import application.VisualObject;
+import aufgaben.konkret.BlaueAufgabe;
+import aufgaben.konkret.GrueneAufgabe;
+import aufgaben.konkret.LilaAufgabe;
+import aufgaben.konkret.OrangeAufgabe;
 import javafx.scene.layout.VBox;
 
 /**

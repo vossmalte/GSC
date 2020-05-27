@@ -1,8 +1,10 @@
 /**
  * 
  */
-package aufgaben;
+package aufgaben.konkret;
 
+import aufgaben.Aufgabe;
+import aufgaben.Blatt;
 import aufgaben.felder.Feld;
 import wuerfel.Wuerfel;
 
@@ -12,7 +14,7 @@ import wuerfel.Wuerfel;
  */
 public abstract class LineareAufgabe extends Aufgabe {
 
-	LineareAufgabe(Blatt blatt) {
+	protected LineareAufgabe(Blatt blatt) {
 		super(blatt);
 	}
 

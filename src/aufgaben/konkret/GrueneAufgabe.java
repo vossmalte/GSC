@@ -1,5 +1,6 @@
-package aufgaben;
+package aufgaben.konkret;
 
+import aufgaben.Blatt;
 import aufgaben.felder.Feld;
 import aufgaben.felder.KreuzFeld;
 import javafx.scene.layout.Pane;

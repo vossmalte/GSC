@@ -1,7 +1,9 @@
-package aufgaben;
+package aufgaben.konkret;
 
 import java.util.HashMap;
 
+import aufgaben.BingoAufgabe;
+import aufgaben.Blatt;
 import aufgaben.felder.KreuzFeld;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -21,15 +23,15 @@ public class BlaueAufgabe extends BingoAufgabe {
 	};
 	
 	private static final Joker[] jokers = {
-			Joker.BLAU,
-			Joker.GELB,
-			Joker.LILA
+			null,
+			null,
+			null
 	};
 	
 	HashMap<int[], Joker> tasksForJokers;
 	
 
-	BlaueAufgabe(Blatt blatt) {
+	public BlaueAufgabe(Blatt blatt) {
 		super(blatt);
 		int i;
 		HBox h;

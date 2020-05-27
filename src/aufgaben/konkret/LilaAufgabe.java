@@ -1,5 +1,6 @@
-package aufgaben;
+package aufgaben.konkret;
 
+import aufgaben.Blatt;
 import aufgaben.felder.Feld;
 import aufgaben.felder.ZahlFeld;
 import javafx.geometry.Insets;
@@ -46,7 +47,7 @@ public class LilaAufgabe extends LineareAufgabe {
 		farbe = Wuerfel.LILA;
 		felder = new ZahlFeld[anzahlFelder];
 		for (int i = 0; i < anzahlFelder; i++)
-			felder[i] = new ZahlFeld(this, Joker.BLAU);
+			felder[i] = new ZahlFeld(this, new Joker(Wuerfel.BLAU));
 
 	}
 }

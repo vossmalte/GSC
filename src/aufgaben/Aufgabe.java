@@ -31,7 +31,7 @@ public abstract class Aufgabe extends VisualObject {
 		return farbe;
 	}
 
-	Aufgabe(Blatt blatt) {
+	protected Aufgabe(Blatt blatt) {
 		init();
 		this.blatt = blatt;
 		getVisualRepresentation();

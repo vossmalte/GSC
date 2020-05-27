@@ -2,7 +2,7 @@ package aufgaben;
 
 public abstract class BingoAufgabe extends Aufgabe {
 
-	BingoAufgabe(Blatt blatt) {
+	protected BingoAufgabe(Blatt blatt) {
 		super(blatt);
 	}
 	
