@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="visFeld" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="faktorLabel" opacity="0.34" translateY="15.0" />
+      <Label fx:id="valueLabel" alignment="CENTER" onMouseClicked="#clicked" text="_" textAlignment="CENTER" />
+   </children>
+   <padding>
+      <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+   </padding>
+</VBox>
