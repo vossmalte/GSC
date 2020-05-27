@@ -3,6 +3,7 @@ package spiel;
 import java.util.ArrayList;
 import java.util.List;
 
+import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
 import spieler.Spieler;
 import wuerfel.Wuerfel;
@@ -24,11 +25,13 @@ public class Spiel {
 	}
 
 	private List<Wuerfel> freieWuerfel = new ArrayList<>();
+	private List<Wuerfel> benutzteWuerfel = new ArrayList<>();
 	private List<Wuerfel> silberTablett = new ArrayList<>();
 	private List<Spieler> spieler = new ArrayList<>();
 	private Spieler aktiverSpieler;
 
 	// GUI Elemente
+	@FXML
 	Pane links, mitte, rechts;
 
 	public Spiel() {
@@ -38,8 +41,11 @@ public class Spiel {
 	public Spiel(int playerNumber) {
 		for (Wuerfel w : Wuerfel.values())
 			freieWuerfel.add(w);
+		wuerfeln();		// init würfel
+		
 		for (int i = 0; i < playerNumber; i++)
 			spieler.add(new Spieler());
+		aktiverSpieler = spieler.get(0);
 
 		spiel = this;
 	}
@@ -47,6 +53,10 @@ public class Spiel {
 	public void wuerfeln() {
 		for (Wuerfel w : freieWuerfel)
 			w.wuerfeln();
+	}
+	
+	public boolean auswaehlbar(Wuerfel w) {
+		return freieWuerfel.contains(w);
 	}
 
 	/**
@@ -58,7 +68,12 @@ public class Spiel {
 	 */
 	public void wuerfelEintragen(Wuerfel wuerfel) {
 		// TODO: Würfel zum Spieler
+		wuerfel.unselect();
+		freieWuerfel.remove(wuerfel);
+		links.getChildren().remove(wuerfel.getVisualRepresentation());
+		aktiverSpieler.addWuerfel(wuerfel);
 
+		// kleinere Wuerfel aussortieren
 		for (Wuerfel w : freieWuerfel.toArray(new Wuerfel[freieWuerfel.size()])) {
 			if (w.getAugenzahl() < wuerfel.getAugenzahl()) {
 				freieWuerfel.remove(w);

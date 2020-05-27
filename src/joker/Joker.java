@@ -8,12 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.ProgressIndicator;
 import wuerfel.Wuerfel;
 
-public enum Joker {
-	BLAU(Wuerfel.BLAU),
-	GRUEN(Wuerfel.GRUEN),
-	GELB(Wuerfel.GELB),
-	LILA(Wuerfel.LILA),
-	FREE(Wuerfel.WEISS);
+public class Joker {
 	
 	static Joker aktuellerJoker = null;
 	public static Joker getAktuellerJoker() {
@@ -28,7 +23,7 @@ public enum Joker {
 	public Wuerfel getFarbe() {
 		return farbe;
 	}
-	Joker(Wuerfel f) {
+	public Joker(Wuerfel f) {
 		this.farbe = f;
 	}
 	

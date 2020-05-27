@@ -2,10 +2,16 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
 <VBox style="-fx-background-color: #4ca3dd;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <HBox fx:id="wuerfelBox" minHeight="40.0" spacing="5.0">
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+      </HBox>
       <Label fx:id="score" text="Punkte: 0" />
    </children>
    <padding>

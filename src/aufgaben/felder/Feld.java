@@ -87,4 +87,6 @@ public abstract class Feld extends VisualObject {
 			System.out.println("Feld wurde bearbeitet");
 		}
 	}
+	
+	
 }

@@ -29,7 +29,7 @@
 		</MenuBar>
 		<HBox VBox.vgrow="ALWAYS">
 			<children>
-				<VBox fx:id="links">
+				<VBox fx:id="links" spacing="5.0">
 					<children>
 						<Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Würfel" textAlignment="CENTER" wrapText="false" />
 						<Button layoutX="13.0" layoutY="35.0" mnemonicParsing="false" onAction="#wuerfeln" text="Würfeln" />
@@ -46,7 +46,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
 				</HBox>
-				<VBox fx:id="rechts">
+				<VBox fx:id="rechts" spacing="5.0">
 					<children>
 						<Label alignment="CENTER" minWidth="60.0" style="&#10;" text="Silbertablett" textAlignment="CENTER" wrapText="false" />
 					</children>

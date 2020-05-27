@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.input.MouseEvent;
+import spiel.Spiel;
 
 /**
  * Enum halt alle Würfel.
@@ -74,7 +75,8 @@ public enum Wuerfel {
 
 		try {
 			visualRepresentation = loader.load();
-			visualRepresentation.setStyle("-fx-background-color: " + this.getFarbCode());
+			String style = visualRepresentation.getStyle();
+			visualRepresentation.setStyle(style + "; " + "-fx-background-color: " + this.getFarbCode());
 			return visualRepresentation;
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -83,11 +85,12 @@ public enum Wuerfel {
 	}
 
 	private void select() {
+		Wuerfel.aktuellerWuerfel = this;
 		visualRepresentation.setScaleX(2);
 		visualRepresentation.setScaleY(2);
 	}
 
-	private void unselect() {
+	public void unselect() {
 		visualRepresentation.setScaleX(1);
 		visualRepresentation.setScaleY(1);
 		Wuerfel.aktuellerWuerfel = null;
@@ -96,8 +99,9 @@ public enum Wuerfel {
 	public void clicked(MouseEvent event) {
 		if (Wuerfel.aktuellerWuerfel != null)
 			Wuerfel.aktuellerWuerfel.unselect();
-		Wuerfel.aktuellerWuerfel = this;
-		Wuerfel.aktuellerWuerfel.select();
+		if (!Spiel.getSpiel().auswaehlbar(this))
+			return;
+		this.select();
 	}
 
 }
