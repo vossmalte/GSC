@@ -28,6 +28,8 @@
 
     %\begin{abstract}    \end{abstract} % TODO Zsf
 
+\section{Vorwort}
+
 \section{Projekte im Informatikunterricht}
     In der modernen Berufswelt gehört die Projektarbeit zur Normalität.
     Dabei werden gewünschte Produkte spezifiziert und umgesetzt.
@@ -44,12 +46,33 @@
     Insbesondere die Kooperation im Team ist eine wichtige Voraussetzung 
     für den Erfolg des Projekts.
 
-\subsection{Verankerung im Bildungsplan}
+\section{Verankerung im Bildungsplan}
 
-\subsection{Voraussetzungen für Softwareprojekte}
+    Der Bildungsplan 2016 für das Fach Informatik 
+    \footnote{\url{http://www.bildungsplaene-bw.de/,Lde/LS/BP2016BW/ALLG/GYM/INF}}
+    stellt den Rahmen für die Umsetzung des Projekts im Unterricht.
+
+\subsection{Inhaltsbezogene Kompetenzen}
+    An inhaltsbezogenen Kompetenzen stehen folgende Gesichtspunkte im Vordergrund:
+    \begin{itemize}
+        \item Aspekte des Projektmanagements und ein Vorgehensmodell erklären.\\
+            Diese Kompetenz ist im Rahmen eines Softwareprojekts gut vermittelbar,
+            da Begriffe wie Milestone, User Story, Sprint, etc. auch erlebbar sind 
+            und ihre Bedeutung damit greifbarer ist.
+            
+        \item Entwicklung eines Prototypen mit Methoden eines Vorgehensmodells.\\
+            Mit der Entwicklung eines Prototypen wird ein konkretes Ziel für das Projekt gesteckt.
+            Die Verwendung der Werkzeuge eines Vorgehensmodells dient dabei als Unterstützung
+            zur Umsetzung des Projekts in Teamarbeit.
+        \item Anwendung erlernter Praktiken wie objektorientierte Programmierung.\\
+            Im Projekt werden bereits erlernte Kompetenzen benötigt, 
+            etwa beim Entwurf mit Hilfe des objektorientierten Paradigmas.
+    \end{itemize}
+
+%\subsection{Voraussetzungen für Softwareprojekte}
     % OOP, GUI, Datenstrukturen
 
-\subsection{Bewertung von Softwareprojekten}
+%\subsection{Bewertung von Softwareprojekten}
     % Aufteilung der Arbeitslast
     % Fremdbewertung
     % Gütekriterien
@@ -72,5 +95,128 @@
 
 % weitere subs: Projektplanung (Hefte), Entwurf, Implementierung
 
+
+\section{Didaktische Analyse}
+
+\subsection{Vernetzung des Bildungsplaninhalte}
+
+    Im Softwareprojekt wird auf verschiedene inhaltliche Kompetenzen zurückgegriffen.
+    Aufbauend auf bereits erlernte Kompetenzen eignet sich das 
+    objektorientierte Programmierparadigma besonders zum Entwurf der Software.
+    Inkarniert durch reale Objekte ergeben sich schnell Klassen für Spieler, Würfel,
+    Block, Felder und Aufgaben.
+    Konzepte wie Geheimnisprinzip, abstrakte Klassen und Vererbung (Aufgaben und Felder sind polymorph) 
+    sind eingängig anwendbar.
+    Zur Haltung von mehrer gleicher Datentypen bedarf es Datenstrukturen,
+    möglich ist eine Realisierung mit Arrays, um etwa einzelne Felder in einer Aufgabe zu halten.
+    Zur Berechnung der Punktzahl müssen die einzelnen Aufgaben und Felder traversiert werden.
+
+    Wie in der Berufswelt werden weitere Werkzeuge zur Implementierung herangezogen.
+    Versionierungssoftware wie git ermöglicht asynchrone Teamarbeit 
+    und die Nutzung bestehender Software wie GUI-Frameworks ist grundlegend
+    für die Umsetzung von Spielen.
+
+\subsection{Didaktische Reduktion}
+    % 5 Grundfragen nach Klafki (Gegenwartsbedeutung, Zukunftsbedeutung, Exemplarische Bedeutung, Thematische Strukturierung, Zugänglichkeit)
+    % Reduktion komplexer Inhalte (Überschaubarkeit, Begreifbarkeit)
+
+\subsection{Methodische Überlegungen}
+
+    Zur Umsetzung des Softwareprojekts ist Scrum als Vorgehensmodell gewählt.
+    Für \susn{} als Anfänger in der Softwareentwicklung eignet sich dieses agile Vorgehen besser als 
+    traditionelle Prozessmodelle, da bereits die Festlegung der Anforderungen in Form
+    von User Stories ein geringeres Abstraktionsniveau besitzt.
+    Weiterhin ist durch das zyklische Modell eine Anpassung der Ziele mit jedem neuen Sprint möglich.
+    Damit bietet Scrum den Entwicklern eine flexiblere Planung und verlangt weniger Einschätzung im Voraus.
+
+    GUI-basierte Software bietet einfache Möglichkeiten zum Testen.
+    Dabei gehen für Spiele Anforderungen und Testfälle meist Hand in Hand, 
+    da sie von bestimmten Szenarios und Eingaben ausgehen.
+    Die Überprüfung dieser Testfälle geschieht dann analog. 
+    Testmethoden wie jUnit eignen sich nur in geringem Umfang, 
+    da die Erzeugung von Szenarios aufwendig ist.
+
+    Das Softwareprojekt eignet sich auch zur Umsetzung im Flipped-Classroom-Konzept.
+    So können Inhalte bereits vorab per Video verfügbar gemacht werden.
+    Im Unterricht kann die Lehrkraft diese Inhalte aufgreifen oder bei Schwierigkeiten helfen.
+    Mit dem Flipped-Classroom-Konzept kann die Lehrkraft die Entwicklung des Projektes besser verfolgen,
+    da die Unterrichtszeit durch das Handeln der \sus{} genutzt wird.
+
+    % Dokumentation via Video
+
+\subsection{Unterrichtsziele}
+
+    Der Unterricht ist stark durch das Produkt am Ende des Projekts motiviert. 
+    Dabei bietet die Umsetzung des Spiels große Freiheiten, 
+    schon beginnend bei der Erstellung der Anforderungen an die Anwendung.
+    Man sieht, dass es viele Wege zum Ziel gibt.
+    Dabei ist die Festlegung des Weges ein Teil der Projektplanung
+
+    % AA3
+
+\section{Umsetzung des Projekts}
+
+\subsection{Projektauftrag}
+    Die Anforderungen an das Projekt sind in Form von User Stories festzuhalten.
+    Beispielhaft sind hier aufsteigend grob priorisiert ein paar gegeben:
+    \begin{itemize}
+        \item Man kann die Würfel würfeln.
+        \item Ein ausgewählter Würfel lässt sich nur in ein legales Feld eintragen.
+        \begin{itemize}
+            \item aufteilbar in verschiedene Farben.
+        \end{itemize}
+        \item Der eingetragene Würfel wird bei Seite gelegt.
+        \item Ausgeschiedene Würfel (Augenzahl kleiner als eingetragener Würfel) werden aufs Silbertablett gelegt.
+        \item Für jeden Spieler werden die Punkte gezählt.
+        \item Joker können erspielt werden.
+        \item Aktive Joker können verwendet werden.
+        \item \dots
+    \end{itemize}
+
+    Diese Sammlung an User Stories ist der Product Backlog.
+    
+\subsection{Projektphasen}
+    Zu Beginn des Softwareprojekts im Informatikunterricht lernen die \sus{} das Spiel selbst kennen.
+    Daraufhin kann der Product Backlog in den einzelnen Teams erstellt werden.
+    
+    In den folgenden Phasen werden Sprints durchlaufen, das heißt, einzelne User Stories werden aus dem 
+    Product Backlog ausgewählt und implementiert.
+    Die Planung der Sprints obliegt den \susn{}, die Lehrkraft kann jedoch unterstützen und beraten,
+    beispielsweise durch Einschätzung des Aufwands.
+    
+    Beispielsweise lassen sich folgende Sprints mit Zielen definieren:
+    \begin{enumerate}
+        \item Fachklassen für Würfel, Spieler, Blatt, Aufgabe, Feld implementieren
+        \item GUI für die obigen Klassen erzeugen
+        \item Controller implementieren
+        \item Update-Methoden für die GUI hinzufügen
+        \item weitere Regeln wie Runden, Joker implementieren
+        \item Abschlusspräsentation
+    \end{enumerate}
+
+\subsection{Beschreibung des eigenen Prototypen}
+
+%TODO
+
+\section{Unterrichtliche Realisierung}
+
+    Das Projekt ist für Gruppen von drei bis vier Personen vorgesehen.
+    Der Zeitumfang beträgt im Basisfach etwa 6 Wochen.
+
+    Ein Softwareprojekt zu benoten ist komplex, denn es wird eine Leistung über
+    einen langen Zeitraum, an der mehrere \sus{} beteiligt sind, bewertet.
+    Wie in vorherigen Teilen des Projekts bietet sich auch hier die Möglichkeit,
+    die \sus{} mitwirken zu lassen und so transparente Kriterien zu erstellen.
+    Diese Festlegung sollte bereits zu Beginn des Projektes geschehen und ist 
+    als Pendant zu Abnahmekritieren zu verstehen.
+    Beispielhaft kann ein Bewertungsschema so aussehen:
+
+    \begin{itemize}
+        \item[30\%] Spiel (Regeln, Hilfestellung, Spaß)
+        \item[25\%] Entwurf
+        \item[15\%] Dokumentation des Quellcodes
+        \item[15\%] Design der GUI
+        \item[15\%] Dokumentation des Softwareprojekts (Taskboards, Sprint backlogs, Testprotokolle)
+    \end{itemize}
 
 \end{document}
