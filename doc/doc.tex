@@ -29,8 +29,6 @@
     %\begin{abstract}    \end{abstract} % TODO Zsf
 
 \section{Vorwort}
-
-\section{Projekte im Informatikunterricht}
     In der modernen Berufswelt gehört die Projektarbeit zur Normalität.
     Dabei werden gewünschte Produkte spezifiziert und umgesetzt.
     Zur Durchführung von Projekten gibt es Konventionen und Modelle, 
@@ -85,16 +83,6 @@
     für eine Person.
     Es besteht eine gewisse Ähnlichkeit zu Kniffel, 
     da durch den Wurf mit mehreren Würfeln Aufgaben auf einem Zettel gelöst werden.
-
-    In der ersten Untersektion werden die Grundlagen des Spiels erläutert.
-    Weiterhin werden in den folgenden Untersektionen verschiedene 
-    Aspekte der Projektdurchführung beleuchtet und Vorschläge zur Umsetzung gemacht
-
-
-\subsection{Grundlagen des Spiels}
-
-% weitere subs: Projektplanung (Hefte), Entwurf, Implementierung
-
 
 \section{Didaktische Analyse}
 
@@ -196,7 +184,25 @@
 
 \subsection{Beschreibung des eigenen Prototypen}
 
-%TODO
+    Ein möglicher Lösungsansatz ist auf GitHub verfügbar 
+    \footnote{\url{https://github.com/vossmalte/GSC}}.
+    Hier wird JavaFX zur graphischen Umsetzung verwendet.
+    Das Layout der Benutzeroberfläche ist dabei großteils in seperaten Dateien 
+    (\texttt{.fxml}) festgehalten.
+    Mit JavaFX können komplexe Strukturen der GUI-Programmierung wie Listener versteckt und 
+    durch einfach Funktionsaufrufe realisiert werden.
+    Im Lösungsvorschlag gibt es eine Oberklasse für graphische Objekte,
+    die das Laden der \texttt{.fxml}-Datei zur Verfügung stellt.
+    Dabei wird die graphische Repräsentation mit dem Objekt verknüpft,
+    welches als Controller für die graphischen Elemente dient.
+    Dadurch wird Darstellung und Modell zwar nicht getrennt,
+    jedoch sind die Zusammenhänge dazwischen einfacher zu finden.
+
+    Im Modell gibt es mehrere Spieler, die jeweils ein Blatt haben.
+    Ein Blatt hat 5 Aufgaben, die jeweils wiederum aus Feldern bestehen.
+    Die Felder sind je nach Aufgabe entweder ankreuzbar oder eintragbar.
+    Weiterhin gibt es genau sechs Würfel, die in einem \texttt{enum} vorhanden sind.
+    Die Verwendung eines \texttt{enum} bringt den Vorteil, das Instanzen Singletons sind.
 
 \section{Unterrichtliche Realisierung}
 
